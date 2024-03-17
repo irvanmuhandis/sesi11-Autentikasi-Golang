@@ -18,7 +18,7 @@ import (
 // 	dbname   = "postgres"
 // )
 
-const (
+var (
 	host     = os.Getenv("PGHOST")
 	port     = os.Getenv("PGPORT")
 	user     = os.Getenv("PGUSER")
