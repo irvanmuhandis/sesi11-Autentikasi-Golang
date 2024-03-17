@@ -3,18 +3,27 @@ package database
 import (
 	"fmt"
 	"log"
+	"os"
 	"sesi11/model"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
+// const (
+// 	host     = "localhost"
+// 	port     = "5432"
+// 	user     = "postgres"
+// 	password = "1234"
+// 	dbname   = "postgres"
+// )
+
 const (
-	host     = "localhost"
-	port     = "5432"
-	user     = "postgres"
-	password = "1234"
-	dbname   = "postgres"
+	host     = os.Getenv("PGHOST")
+	port     = os.Getenv("PGPORT")
+	user     = os.Getenv("PGUSER")
+	password = os.Getenv("PGPASSWORD")
+	dbname   = os.Getenv("PGDATABASE")
 )
 
 var (
